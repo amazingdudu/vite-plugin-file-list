@@ -1,0 +1,9 @@
+.DS_Store
+.editorconfig
+.eslintignore
+.gitignore
+.prettierignore
+node_module
+*.ejs
+template
+package-lock.json
