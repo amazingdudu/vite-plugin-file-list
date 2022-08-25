@@ -1,20 +1,31 @@
-# vite-plugin-file-directory
+# vite-plugin-file-list
 
-Lists all file directories under the current project.
-列出当前项目下所有文件目录。
+Lists all file directories and files under the current project, Useful for multi-page applications.
 
 ## Install
 
 ```sh
-npm i vite-plugin-file-directory -D
+npm i vite-plugin-file-list -D
 ```
 
 ## Usage
 
 ```js
-import fileDirectory from 'vite-plugin-file-directory';
+import fileList from 'vite-plugin-file-list';
 
 export default {
-    plugins: [fileDirectory()]
+    plugins: [fileList()]
 };
+```
+
+## Options
+
+```js
+interface Options {
+    /**
+     * ignore path
+     * @default [/^\.|node_modules/]
+     */
+    ignorePath?: RegExp[];
+}
 ```

@@ -1,24 +1,46 @@
 {
-    "name": "vite-plugin-file-directory",
+    "name": "vite-plugin-file-list",
     "version": "1.0.0",
-    "description": "",
-    "keywords": [],
+    "description": "Lists all file directories and files under the current project",
+    "keywords": [
+        "vite",
+        "vite-plugin",
+        "file list"
+    ],
+    "homepage": "https://github.com/amazingdudu/vite-plugin-file-list#readme",
+    "bugs": {
+        "url": "https://github.com/amazingdudu/vite-plugin-file-list/issues"
+    },
     "repository": {
         "type": "git",
-        "url": "https://github.com/amazingdudu/vite-plugin-file-directory.git"
+        "url": "git+https://github.com/amazingdudu/vite-plugin-file-list.git"
     },
     "license": "MIT",
     "author": "amazingdudu",
-    "main": "dist/index.js",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "src"
+    ],
     "scripts": {
+        "build": "npm run eslint && unbuild",
         "eslint": "eslint --ext .ts ./ --fix",
         "prepare": "husky install",
         "prettier": "prettier -c -w '**/*'",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "dependencies": {
-        "@types/ejs": "^3.1.1",
-        "ejs": "^3.1.8"
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+        "*": "prettier -w"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.30.4",
@@ -32,9 +54,10 @@
         "prettier-plugin-packagejson": "^2.2.18",
         "pretty-quick": "^3.1.3",
         "typescript": "^4.7.4",
-        "vite": "^2.9.13"
+        "unbuild": "^0.8.9",
+        "vite": "^3.0.9"
     },
     "peerDependencies": {
-        "vite": "^2.9.13"
+        "vite": "^3.0.9"
     }
 }

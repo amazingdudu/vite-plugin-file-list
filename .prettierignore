@@ -4,6 +4,7 @@
 .gitignore
 .prettierignore
 node_module
-*.ejs
-template
 package-lock.json
+.eslintcache
+.husky/*
+dist
