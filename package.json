@@ -39,7 +39,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "lint-staged": {
-        "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+        "*.{js,ts}": "eslint --cache --fix",
         "*": "prettier -w"
     },
     "devDependencies": {
