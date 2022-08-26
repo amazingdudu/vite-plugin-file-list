@@ -7,7 +7,7 @@ export interface Options {
     ignoreFile?: RegExp[];
 }
 
-function listFileDirectory({ ignoreFile = [] }: Options = {}): Plugin {
+function listFile({ ignoreFile = [] }: Options = {}): Plugin {
     const ignoreFileRegList = [/^\.|node_modules/, ...ignoreFile];
 
     return {
@@ -91,4 +91,4 @@ function generateHtml(
             </html>`;
 }
 
-export default listFileDirectory;
+export default listFile;
