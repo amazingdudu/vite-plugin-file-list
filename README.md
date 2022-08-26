@@ -1,6 +1,6 @@
-# vite-plugin-file-list
+# vite-plugin-file-list [![npm](https://img.shields.io/npm/v/vite-plugin-file-list.svg)](https://npmjs.com/package/vite-plugin-file-list)
 
-Lists all file directories and files under the current project, Useful for multi-page applications.
+Lists all file directories and files under the current project, useful for multi-page applications.
 
 ## Install
 
